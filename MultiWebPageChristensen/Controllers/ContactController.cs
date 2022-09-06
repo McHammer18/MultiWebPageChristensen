@@ -68,7 +68,7 @@ namespace MultiWebPageChristensen.Controllers
         {
             context.Contacts.Remove(contact);
             context.SaveChanges();
-            return RedirectToAction("Index", "Movie");
+            return RedirectToAction("Index", "Contact");
         }
     }
 }
