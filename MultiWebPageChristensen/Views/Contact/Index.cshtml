@@ -8,10 +8,10 @@
 </header>
 <body>
     <h2>Contact List</h2>
-    <a asp-controller="Movie" asp-action="Add">Add New Contact</a>
+    <a asp-controller="Contact" asp-action="Add">Add New Contact</a>
     <table class="table table-hover">
         <thead>
-            <tr><th>Name</th><th>Year</th><th>Genre</th><th>Rating</th><th></th></tr>
+            <tr><th>Name</th><th>Phone</th><th>Address</th><th>Notes</th><th></th></tr>
         </thead>
         <tbody>
             @foreach (var contact in Model)
