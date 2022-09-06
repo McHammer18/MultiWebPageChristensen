@@ -7,6 +7,7 @@
     <h3>@Model.Name (@Model.Number)</h3>
 
     <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="ContactId" />
         <button type="submit" class="btn btn-primary">Delete</button>
         <a asp-controller="Contact" asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
     </form>
