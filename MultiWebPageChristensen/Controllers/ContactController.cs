@@ -17,7 +17,7 @@ namespace MultiWebPageChristensen.Controllers
         public IActionResult Index()
         {
             var contacts = context.Contacts
-                .OrderBy(m => m.Name)
+                .OrderBy(c => c.Name)
                 .ToList();
             return View(contacts);
         }
@@ -47,7 +47,7 @@ namespace MultiWebPageChristensen.Controllers
                 else
                     context.Contacts.Update(contact);
                 context.SaveChanges();
-                return RedirectToAction("Index", "Movie");
+                return RedirectToAction("Index", "Contact");
             }
             else
             {
