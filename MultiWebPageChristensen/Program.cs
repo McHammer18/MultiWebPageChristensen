@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using MultiWebPageChristensen.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ContactContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ContactContext")));
 
 var app = builder.Build();
 
